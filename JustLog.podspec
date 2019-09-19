@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/justeat_tech'
   
   s.ios.deployment_target = '10.0'
+  s.macos.deployment_target = '10.14'
   s.tvos.deployment_target = '10.0'
   s.swift_version = '5.0'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
