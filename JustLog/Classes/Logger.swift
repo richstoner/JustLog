@@ -222,8 +222,14 @@ extension Logger {
             fileMetadata[appVersionKey] = "\(bundleShortVersion) (\(bundleVersion))"
         }
         
+        #if os(OSX)
+        let osVersion = ProcessInfo.processInfo.operatingSystemVersionString
+        fileMetadata[iosVersionKey] = osVersion
+        fileMetadata[deviceTypeKey] = "Desktop" // TODO: Maybe add some more detail here
+        #else
         fileMetadata[iosVersionKey] = UIDevice.current.systemVersion
         fileMetadata[deviceTypeKey] = UIDevice.current.platform()
+        #endif
         
         return fileMetadata
     }

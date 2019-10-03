@@ -6,6 +6,8 @@
 //  Copyright © 2017 Just Eat. All rights reserved.
 //
 
+#if os(iOS)
+
 import UIKit
 
 extension UIDevice {
@@ -18,3 +20,5 @@ extension UIDevice {
         return String(cString: machine)
     }
 }
+
+#endif
