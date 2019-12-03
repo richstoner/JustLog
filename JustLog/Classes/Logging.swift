@@ -6,7 +6,11 @@
 //  Copyright © 2017 Just Eat. All rights reserved.
 //
 
+#if os(OSX)
+import AppKit
+#else
 import UIKit
+#endif
 
 public protocol Logging {
     
